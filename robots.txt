@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://veronica-bolzonella.github.io/al-folio/sitemap.xml
+Sitemap: https://veronica-bolzonella.github.io/sitemap.xml
