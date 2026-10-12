@@ -2,7 +2,7 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: Hi, this is Vero! # the website title (if blank, full name will be used instead)
+title: Hi # the website title (if blank, full name will be used instead)
 first_name: Veronica
 last_name: Bolzonella
 contact_note: >
