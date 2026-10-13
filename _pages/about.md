@@ -9,9 +9,8 @@ profile:
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    Nijmegen, Netherlands
+    Relocating soon, where do you think I should go next?
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
@@ -27,8 +26,13 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](https://www.reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+I am Veronica, a Masters' student of Artificial Intellience. I started my Bachelors in AI at Radboud University, back in days when people would say _"AI? What is that?"_. That was actually just a few years back, in 2021. Since then, I finished my Bachelors, started my Masters in Intelligent Technologies, and now people say _"Oh AI, you are coding yourself out of a job"_. 
+In the years I spent learning, I found and shaped my niche within the vast field of AI in the intersection of Deep Learning and Applied Mathematics. 
+During my studies, I found that my spark lays in the most fundamental mathematical foundations of AI.
+Simultaneously, through inspiring professors around me and personal exploration, I developed a keen interest for Dynamical Systems and Game Theory. 
+A combination of these elements brought me to the work I am currently developing and I am most proud of. In my research I explore the use of Neural Differential Equations to solve complex heterogeneous systems in the framework of Graphon Mean Field Games. 
+This research not only expanded my academic horizon to new fields and topics, but also allowed me to connect to researchers all over the globe, who I admire and inspire me to continue my journey in this world.
+ My goal is to contribute to the academic community in fundamental Deep Learning and Mathematics, to create solutions that can help the world find its Equilibrium (hopefully, while _not_ coding myself out of a job). I hope to make a career out of my passion for research, and never cease to be curious and inquisitive. 
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
-
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+Beyond the academic sphere, I enjoy bouldering, running, and raising my giant monstera. 
+Growing up in Italy, food is my love language, my comfort, and a form of creative expression and discovery. I am in a forever quest to match my parents' pizza recipe, while also mastering the perfect vegan ice cream, a research that I approach with scientific precision and religious commitment. I am happy to share the forever evolving results with any food enthusiast out there!
