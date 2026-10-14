@@ -4,7 +4,7 @@ title: Master's Thesis
 description: Solving Graphon MFGs with Neural Differential Equations
 img: assets/img/12.jpg
 importance: 1
-category: work
+category: research
 related_publications: true
 ---
 

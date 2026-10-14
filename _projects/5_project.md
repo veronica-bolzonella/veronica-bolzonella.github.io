@@ -4,7 +4,7 @@ title: Kaggle Competition
 description: BirdCLEF2026+, classifying animal sounds
 img: assets/img/birdclef.jpg
 importance: 4
-category: work
+category: research
 ---
 
 Me and my team participated in the BirdCLEF2026+ Kaggle Competition, an annual challenge that aims to automatically classity bird sounds from recordings of the wild.

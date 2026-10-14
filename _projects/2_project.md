@@ -3,7 +3,7 @@ layout: page
 title: Bachelor's Thesis
 description: Low Effort Compression for Efficient Diffusion
 importance: 3
-category: work
+category: research
 giscus_comments: false
 ---
 

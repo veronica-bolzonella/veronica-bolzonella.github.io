@@ -4,7 +4,7 @@ title: Kaggle Competition
 description: Deep Past, BART translates Akkadian
 img: assets/img/akkadian.md
 importance: 4
-category: work
+category: research
 ---
 In 2025 I participated in the Kaggle Competition’s Deep Past challenge together with a great team. Our task was to translate Old Akkadian text into English. 
 
