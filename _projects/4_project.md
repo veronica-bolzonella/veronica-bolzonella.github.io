@@ -2,7 +2,7 @@
 layout: page
 title: Kaggle Competition
 description: Deep Past, BART translates Akkadian
-img:
+img: assets/img/akkadian.md
 importance: 4
 category: fun
 ---
