@@ -2,7 +2,7 @@
 layout: page
 title: Kaggle Competition
 description: BirdCLEF2026+, classifying animal sounds
-img: assets/img/birdclef.jpg
+img: assets/img/birdclef.jpeg
 importance: 4
 category: research
 ---
