@@ -5,7 +5,7 @@ description: Neural ODEs for language generation
 img: assets/img/7.jpg
 redirect: https://www.wikipedia.org/
 importance: 2
-category: research
+category: work
 ---
 
 During my first year of Master, I conducted a research project under the supervision of Tal Kachman as a preparation to my extended research thesis.
