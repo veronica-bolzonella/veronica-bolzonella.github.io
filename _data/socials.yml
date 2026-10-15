@@ -8,6 +8,6 @@ email: veronica.bolzonella@ru.nl # your email address
 # wechat_qr: # filename of your wechat qr-code saved as an image (e.g., wechat-qr.png if saved to assets/img/wechat-qr.png)
 # whatsapp_number: # your WhatsApp number (full phone number in international format. Omit any zeroes, brackets, or dashes when adding the phone number in international format.)
 custom_social: # can be any name here other than the ones already defined in the jekyll-socials plugin
-  logo: https://duckduckgo.com/?t=ffab&q=linkedin+logo&ia=images&iax=images&iai=https%3A%2F%2Fpngimg.com%2Fuploads%2FlinkedIn%2FlinkedIn_PNG7.png
+  logo: assets/img/linkedin.png
   title: Linkedin
   url: https://www.linkedin.com/in/veronica-bolzonella-9a648720b
