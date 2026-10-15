@@ -2,7 +2,7 @@
 layout: post
 title: My Master's Thesis is approved for the Mistacs Globalink Research Award!
 date: 2026-01-07
-inline: true
+inline: false
 related_posts: false
 ---
 
