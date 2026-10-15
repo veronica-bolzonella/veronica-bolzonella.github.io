@@ -3,6 +3,7 @@ layout: page
 permalink: /teaching/
 title: teaching
 description: A brief description of my growth in the teaching world.
+published: true
 nav: true
 nav_order: 6
 calendar: true
