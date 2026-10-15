@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: <a href='#'>Radboud University</a>. veronica.bolzonella@ru.nl
 
 profile:
   align: right
@@ -38,3 +38,5 @@ My goal is to contribute to the academic community in fundamental Deep Learning 
 
 Beyond the academic sphere, I enjoy bouldering, running, and raising giant monsteras or weirdly shaped bamboos. 
 Growing up in Italy, food is my love language, my comfort, and a form of creative expression and discovery. I am in a forever quest to match my parents' pizza recipe, and to master the perfect vegan home made ice cream, a research that I approach with scientific precision and religious commitment. I am happy to share the forever evolving results with any food enthusiast out there!
+
+On a professional level, I also nourish my passion for Math, as I am a tutor specialized in IB Math AA and AI, and I have been tutoring and teaching revision courses with IB Academy since 2022. Alongside teaching, I co-authored the (https://ib-academy.nl/sgs)[IB Academy Math Study Guides]. At IB Academy I also cover the roles of Project Manager and Recruiter. 
