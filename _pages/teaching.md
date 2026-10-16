@@ -11,17 +11,16 @@ calendar: true
 
 I have always been passionate about teaching. Among my earliest memories are my classrooms of snails, all lined up in my garden's sidewalk, while I thought them addition, multiplication, and a bit of English and science here and there. Snails are amazing students. Even if they want to run away from your class, they'll be on their way so quietly no other snail gets distracted, and they won't get far before the end of your class!
 
-
 <div class="row mt-3">
-    <div class="col-sm mt-3 mt-md-0">
+    <div class="col-md-4 float-start me-4 mb-3">
         {% include figure.liquid loading="eager" path="assets/img/teaching.png" class="img-fluid rounded z-depth-1" zoomable=true %}
-        <p class="text-muted mt-2">Lining up all your dolls also makes for a great practice class in your early teacher days! Here is a demonstration from my class in 2005.</p>
+        <p class="text-muted mt-2"><em>Lining up all your dolls also makes for a great practice class in your early teacher days! Here is a demonstration from my class in 2005.</p>
     </div>
 </div>
 
 
 
-Jokes aside, I always thought "I will be a teacher when I grow up". My High School Mathematics teacher is to this day one of the most influencial figures in my life. I hope for everyone to be thaught by the kind of teacher that transpires passion for their subject, the kind of teacher that guides you into their world and leaves you the space to make it your own.
+Jokes aside, I always thought _"I will be a teacher when I grow up"_. My High School Mathematics teacher is to this day one of the most influencial figures in my life. I hope for everyone to be thaught by the kind of teacher that transpires passion for their subject, the kind of teacher that guides you into their world and leaves you the space to make it your own.
 
 In the past years, I can say I had the honour to see this dream grow into something more. Working at IB Academy, I developed teaching and studying material, taught individual students and groups in different Math subjects, with differnt interst and motivation.
 Something about this job that I value immensly is that it showed me dozens of different ways in which people think about, perceive and communicate Math. This is not only a very interesting thought on its own, but it turned out to be an incredibly helpful tool in my life. By finding ways to adaopt my own thinking process to that of my students, I trained my mind to be flexible, fluid and creative. 
