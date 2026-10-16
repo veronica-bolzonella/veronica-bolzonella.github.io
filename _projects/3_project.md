@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Research Poject
+title: Dynamical LLM
 description: Neural ODEs for language generation
 img: 
 importance: 2
