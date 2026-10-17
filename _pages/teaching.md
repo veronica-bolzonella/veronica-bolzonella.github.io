@@ -18,8 +18,7 @@ My snail students were remarkably well behaved! I taught them addition and  mult
 </div>
 
 
-As a little girl, _“I’ll be a teacher when I grow up”_ was never a phase. It was a plan.
-Later, my High School Mathematics teacher became my muse, and is, to this day, one of the most influencial peopleof my life.
+As a little girl, I used to say _“I’ll be a teacher when I grow up”_. Later, my High School Mathematics teacher became my muse, and is, to this day, one of the most influencial peopleof my life.
 
 In the past years, I can say I had the honour to see this dream grow into something more. Working at IB Academy, I developed teaching and studying material, taught individual students and groups in different Math subjects, with differnt interst and motivation.
 Something about this job that I value immensly is that it showed me dozens of different ways in which people think about, perceive and communicate Math. This is not only a very interesting thought on its own, but it turned out to be an incredibly helpful tool in my life. By finding ways to adaopt my own thinking process to that of my students, I trained my mind to be flexible, fluid and creative.
