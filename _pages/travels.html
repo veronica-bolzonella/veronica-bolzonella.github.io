@@ -2,7 +2,7 @@
 layout: page
 title: travels
 permalink: /travels/
-description: Some places I have been and some photos I like.
+description: Some photos from places I have been.
 nav: true
 nav_order: 5
 ---
@@ -22,27 +22,44 @@ nav_order: 5
   {% endif %}
 {% endfor %}
 
-{% comment %} 1. Extract unique travel folders {% endcomment %}
-{% assign raw_folders = "" | split: "" %}
+{% comment %} 1. Travel folders that actually have photos {% endcomment %}
+{% assign photo_folders = "" | split: "" %}
 {% for p in photos %}
   {% assign parts = p.path | split: "/" %}
   {% assign folder = parts[4] %}
   {% if parts[5] %}
-    {% assign raw_folders = raw_folders | push: folder %}
+    {% assign photo_folders = photo_folders | push: folder %}
   {% endif %}
 {% endfor %}
-{% assign folders = raw_folders | uniq %}
+{% assign photo_folders = photo_folders | uniq %}
 
-{% comment %} 2. Build dataset and sort by nav_order {% endcomment %}
-{% assign trips = "" | split: "" %}
+{% comment %}
+  2. All trips: folders with photos plus every entry in _data/travels.
+  Trips with photos come first (sorted by nav_order); trips without photos
+  are rendered as compact name-only cards at the end.
+{% endcomment %}
+{% assign folders = photo_folders %}
+{% for entry in site.data.travels %}
+  {% assign folders = folders | push: entry[0] %}
+{% endfor %}
+{% assign folders = folders | uniq %}
+
+{% assign trips_with_photos = "" | split: "" %}
+{% assign trips_without_photos = "" | split: "" %}
 {% for f in folders %}
   {% assign meta = site.data.travels[f] %}
   {% assign order = meta.nav_order | default: 99 | plus: 1000 %}
   {% assign trip_item = order | append: "|" | append: f %}
-  {% assign trips = trips | push: trip_item %}
+  {% if photo_folders contains f %}
+    {% assign trips_with_photos = trips_with_photos | push: trip_item %}
+  {% else %}
+    {% assign trips_without_photos = trips_without_photos | push: trip_item %}
+  {% endif %}
 {% endfor %}
 
-{% assign sorted_trips = trips | sort %}
+{% assign sorted_trips = trips_with_photos | sort %}
+{% assign sorted_trips_without_photos = trips_without_photos | sort %}
+{% assign sorted_trips = sorted_trips | concat: sorted_trips_without_photos %}
 
 {% comment %} 3. Countries that have a card, highlighted on the map below {% endcomment %}
 {% assign visited_selectors = "" | split: "" %}
@@ -84,28 +101,36 @@ nav_order: 5
     {% endif %}
   {% endfor %}
 
-  <button class="travel-card" data-target="dlg-{{ f_id }}">
-    <div class="card-image-wrap">
-      <img src="{{ group_imgs.first.path | relative_url }}" alt="{{ name }}" loading="lazy">
-    </div>
-    <div class="card-info">
-      <h3>{{ name }}</h3>
-    </div>
-  </button>
-
-  <dialog id="dlg-{{ f_id }}" class="travel-dialog">
-    <div class="travel-head">
-      <div>
-        <h4>{{ name }}</h4>
+  {% if group_imgs.size > 0 %}
+    <button class="travel-card" data-target="dlg-{{ f_id }}">
+      <div class="card-image-wrap">
+        <img src="{{ group_imgs.first.path | relative_url }}" alt="{{ name }}" loading="lazy">
       </div>
-      <button class="close" aria-label="Close">&times;</button>
+      <div class="card-info">
+        <h3>{{ name }}</h3>
+      </div>
+    </button>
+
+    <dialog id="dlg-{{ f_id }}" class="travel-dialog">
+      <div class="travel-head">
+        <div>
+          <h4>{{ name }}</h4>
+        </div>
+        <button class="close" aria-label="Close">&times;</button>
+      </div>
+      <div class="travel-photos">
+        {% for img in group_imgs %}
+          <img src="{{ img.path | relative_url }}" alt="{{ name }}" loading="lazy" decoding="async">
+        {% endfor %}
+      </div>
+    </dialog>
+  {% else %}
+    <div class="travel-card travel-card-empty">
+      <div class="card-info">
+        <h3>{{ name }}</h3>
+      </div>
     </div>
-    <div class="travel-photos">
-      {% for img in group_imgs %}
-        <img src="{{ img.path | relative_url }}" alt="{{ name }}" loading="lazy" decoding="async">
-      {% endfor %}
-    </div>
-  </dialog>
+  {% endif %}
 {% endfor %}
 </div>
 
@@ -183,6 +208,25 @@ nav_order: 5
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+/* Name-only card for trips that don't have a displayable photo yet */
+.travel-card-empty {
+  align-self: start;
+  justify-self: start;
+  cursor: default;
+  border-style: dashed;
+  opacity: 0.85;
+}
+.travel-card-empty:hover {
+  transform: none;
+  box-shadow: none;
+}
+.travel-card-empty .card-info {
+  padding: 0.5rem 0.9rem;
+}
+.travel-card-empty .card-info h3 {
+  font-size: 0.95rem;
+  font-weight: 500;
 }
 
 /* Dialog & Photo Gallery */
