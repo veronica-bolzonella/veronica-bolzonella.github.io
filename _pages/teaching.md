@@ -11,11 +11,9 @@ calendar: true
 
 I have always been passionate about teaching. Among my earliest memories are my classrooms of snails, all lined up in my garden's sidewalk, while I thought them addition, multiplication, and a bit of English and science here and there. Snails are amazing students. Even if they want to run away from your class, they'll be on their way so quietly no other snail gets distracted, and they won't get far before the end of your class!
 
-<div class="row mt-3">
-    <div class="col-md-4 float-start me-4 mb-3">
-        {% include figure.liquid loading="eager" path="assets/img/teaching.png" class="img-fluid rounded z-depth-1" zoomable=true %}
-        <p class="text-muted mt-2"><em>Lining up all your dolls also makes for a great practice class in your early teacher days! Here is a demonstration from my class in 2005.</em></p>
-    </div>
+<div style="float: left; width: 30%; min-width: 160px; margin: 0 1.5rem 1rem 0;">
+  {% include figure.liquid loading="eager" path="assets/img/teaching.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+  <p class="text-muted mt-2"><em>Lining up all your dolls also makes for a great practice class in your early teacher days! Here is a demonstration from my class in 2005.</em></p>
 </div>
 
 
