@@ -9,7 +9,7 @@ category: research
 
 During my Masters I conducted a small research project aimed at identifying bias in children books.
 
-<div style="float: left; width: 30%; min-width: 160px; margin: 0 1.5rem 1rem 0;">
+<div style="width: 100%; margin: 0 0 1.5rem 0;">
   {% include figure.liquid loading="eager" path="assets/img/gen_animal_size.png" class="img-fluid rounded z-depth-1" zoomable=true %}
   <p class="text-muted mt-2"><em> Animals ordered by similarity to the He and She axis, color coded by size. Large animals tend to be associated more to male figures, and small animals to female figures.</em></p>
 </div>

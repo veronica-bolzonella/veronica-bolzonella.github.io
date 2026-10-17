@@ -6,55 +6,223 @@ description: Some photos from places I've been.
 nav: true
 nav_order: 5
 ---
+
 {% assign photos = site.static_files | where_exp: "f", "f.path contains '/assets/img/travels/'" %}
-{% assign countries = "" | split: "" %}
+
+{% comment %} 1. Extract unique travel folders {% endcomment %}
+{% assign raw_folders = "" | split: "" %}
 {% for p in photos %}
-{% assign parts = p.path | split: "/" %}
-{% assign countries = countries | push: parts[4] %}
+  {% assign parts = p.path | split: "/" %}
+  {% assign folder = parts[4] %}
+  {% assign raw_folders = raw_folders | push: folder %}
 {% endfor %}
-{% assign countries = countries | uniq | sort %}
+{% assign folders = raw_folders | uniq %}
+
+{% comment %} 2. Build dataset and sort by nav_order {% endcomment %}
+{% assign trips = "" | split: "" %}
+{% for f in folders %}
+  {% assign meta = site.data.travels[f] %}
+  {% assign order = meta.nav_order | default: 99 | plus: 1000 %}
+  {% assign trip_item = order | append: "|" | append: f %}
+  {% assign trips = trips | push: trip_item %}
+{% endfor %}
+
+{% assign sorted_trips = trips | sort %}
 
 <div class="travel-grid">
-{% for c in countries %}
-{% assign needle = "/assets/img/travels/" | append: c | append: "/" %}
-{% assign imgs = photos | where_exp: "f", "f.path contains needle" %}
-{% assign name = c | replace: "-", " " %}
-{% assign id = c | slugify %}
-<button class="travel-card" data-target="dlg-{{ id }}">
-  <img src="{{ imgs.first.path | relative_url }}" alt="{{ name }}" loading="lazy">
-  <span>{{ name }}</span>
-</button>
-<dialog id="dlg-{{ id }}" class="travel-dialog">
-  <div class="travel-head"><h4>{{ name }}</h4><button class="close" aria-label="Close">&times;</button></div>
-  <div class="travel-photos">
-  {% for img in imgs %}<img src="{{ img.path | relative_url }}" alt="{{ name }}" loading="lazy">{% endfor %}
-  </div>
-</dialog>
+{% for item in sorted_trips %}
+  {% assign f = item | split: "|" | last %}
+  {% assign meta = site.data.travels[f] %}
+  
+  {% assign clean_name = f | replace: "-", " " %}
+  {% assign name = meta.name | default: clean_name %}
+  {% assign desc = meta.description %}
+  {% assign f_id = f | slugify %}
+
+  {% assign search_path = "/assets/img/travels/" | append: f | append: "/" %}
+  {% assign group_imgs = photos | where_exp: "img", "img.path contains search_path" | where_exp: "img", "img.extname != '.yml' and img.extname != '.json'" %}
+
+  <button class="travel-card" data-target="dlg-{{ f_id }}">
+    <div class="card-image-wrap">
+      <img src="{{ group_imgs.first.path | relative_url }}" alt="{{ name }}" loading="lazy">
+    </div>
+    <div class="card-info">
+      <h3>{{ name }}</h3>
+      {% if desc %}
+        <p>{{ desc }}</p>
+      {% endif %}
+    </div>
+  </button>
+
+  <dialog id="dlg-{{ f_id }}" class="travel-dialog">
+    <div class="travel-head">
+      <div>
+        <h4>{{ name }}</h4>
+        {% if desc %}<p class="dialog-desc">{{ desc }}</p>{% endif %}
+      </div>
+      <button class="close" aria-label="Close">&times;</button>
+    </div>
+    <div class="travel-photos">
+      {% for img in group_imgs %}
+        <img src="{{ img.path | relative_url }}" alt="{{ name }}" loading="lazy" onload="classifyImage(this)">
+      {% endfor %}
+    </div>
+  </dialog>
 {% endfor %}
 </div>
 
 <style>
-.travel-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem}
-.travel-card{padding:0;border:1px solid var(--global-divider-color);border-radius:.5rem;overflow:hidden;
-  background:var(--global-card-bg-color);color:var(--global-text-color);cursor:pointer;text-align:left}
-.travel-card:hover{box-shadow:0 4px 12px rgba(0,0,0,.25)}
-.travel-card img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
-.travel-card span{display:block;padding:.5rem .75rem;font-weight:600;text-transform:capitalize}
-dialog.travel-dialog{width:min(1100px,95vw);max-height:90vh;border:0;border-radius:.5rem;padding:1rem;
-  background:var(--global-bg-color);color:var(--global-text-color)}
-dialog.travel-dialog::backdrop{background:rgba(0,0,0,.65)}
-.travel-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:.75rem}
-.travel-head h4{text-transform:capitalize;margin:0}
-.travel-head .close{border:0;background:none;font-size:2rem;line-height:1;color:inherit;cursor:pointer}
-.travel-photos{display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem}
-.travel-photos img{width:100%;aspect-ratio:4/3;object-fit:cover}
+/* Grid & Cards */
+.travel-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+.travel-card {
+  padding: 0;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 0.75rem;
+  overflow: hidden;
+  background: var(--global-card-bg-color);
+  color: var(--global-text-color);
+  cursor: pointer;
+  text-align: left;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+.travel-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+.card-image-wrap {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+}
+.card-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.card-info {
+  padding: 0.85rem 1rem;
+}
+.card-info h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  text-transform: capitalize;
+}
+.card-info p {
+  margin: 0.3rem 0 0 0;
+  font-size: 0.85rem;
+  color: var(--global-text-color-light, #666);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Dialog & Photo Gallery */
+dialog.travel-dialog {
+  width: min(1100px, 95vw);
+  max-height: 90vh;
+  border: 0;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  background: var(--global-bg-color);
+  color: var(--global-text-color);
+}
+dialog.travel-dialog::backdrop {
+  background: rgba(0, 0, 0, 0.75);
+}
+.travel-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--global-divider-color);
+  padding-bottom: 0.75rem;
+}
+.travel-head h4 {
+  text-transform: capitalize;
+  margin: 0;
+  font-size: 1.4rem;
+}
+.dialog-desc {
+  margin: 0.25rem 0 0 0;
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+.travel-head .close {
+  border: 0;
+  background: none;
+  font-size: 2rem;
+  line-height: 1;
+  color: inherit;
+  cursor: pointer;
+}
+
+/* Layout for Horizontal & Vertical Split */
+.travel-photos {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.photo-section {
+  display: grid;
+  gap: 0.75rem;
+}
+.photo-section.horizontal-grid {
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+.photo-section.horizontal-grid img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 0.35rem;
+}
+.photo-section.vertical-grid {
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+}
+.photo-section.vertical-grid img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 0.35rem;
+}
 </style>
 
 <script>
+function classifyImage(img) {
+  const container = img.closest('.travel-photos');
+  
+  let horizSec = container.querySelector('.horizontal-grid');
+  let vertSec = container.querySelector('.vertical-grid');
+
+  if (!horizSec) {
+    horizSec = document.createElement('div');
+    horizSec.className = 'photo-section horizontal-grid';
+    container.appendChild(horizSec);
+  }
+  if (!vertSec) {
+    vertSec = document.createElement('div');
+    vertSec.className = 'photo-section vertical-grid';
+    container.appendChild(vertSec);
+  }
+
+  if (img.naturalWidth >= img.naturalHeight) {
+    horizSec.appendChild(img);
+  } else {
+    vertSec.appendChild(img);
+  }
+}
+
 document.querySelectorAll('.travel-card').forEach(b =>
   b.addEventListener('click', () => document.getElementById(b.dataset.target).showModal()));
+
 document.querySelectorAll('dialog.travel-dialog').forEach(d => {
   d.querySelector('.close').addEventListener('click', () => d.close());
-  d.addEventListener('click', e => { if (e.target === d) d.close(); }); // click backdrop to close
+  d.addEventListener('click', e => { if (e.target === d) d.close(); });
 });
 </script>
