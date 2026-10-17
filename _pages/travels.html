@@ -2,7 +2,7 @@
 layout: page
 title: travels
 permalink: /travels/
-description: Some photos from places I've been.
+description: Some places I have been and some photos I like.
 nav: true
 nav_order: 5
 ---
@@ -43,6 +43,25 @@ nav_order: 5
 {% endfor %}
 
 {% assign sorted_trips = trips | sort %}
+
+{% comment %} 3. Countries that have a card, highlighted on the map below {% endcomment %}
+{% assign visited_selectors = "" | split: "" %}
+{% assign trips_without_code = "" | split: "" %}
+{% for f in folders %}
+  {% assign meta = site.data.travels[f] %}
+  {% if meta.code %}
+    {% assign selector = ".travel-map #" | append: meta.code | downcase %}
+    {% assign visited_selectors = visited_selectors | push: selector %}
+  {% else %}
+    {% assign trip_name = meta.name | default: f %}
+    {% assign trips_without_code = trips_without_code | push: trip_name %}
+  {% endif %}
+{% endfor %}
+
+{% comment %} Map of the world, with the countries below highlighted {% endcomment %}
+<div class="travel-map">
+  {% include_relative travels-map.svg %}
+</div>
 
 <div class="travel-grid">
 {% for item in sorted_trips %}
@@ -91,6 +110,30 @@ nav_order: 5
 </div>
 
 <style>
+/* Map */
+.travel-map {
+  max-width: 900px;
+  margin: 0 auto 2.5rem;
+}
+.travel-map svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.travel-map path,
+.travel-map circle {
+  fill: var(--global-divider-color, #d0d5dd);
+  stroke: var(--global-bg-color, #fff);
+  stroke-width: 0.5;
+  transition: fill 0.2s ease;
+}
+{% if visited_selectors.size > 0 %}
+{{ visited_selectors | join: ", " }},
+{% endif %}
+.travel-map .is-visited {
+  fill: var(--global-theme-color, #b509ac);
+}
+
 /* Grid & Cards */
 .travel-grid {
   display: grid;
@@ -247,6 +290,15 @@ dialog.travel-dialog[open]::backdrop {
 
 <script>
 document.documentElement.classList.add('has-js');
+
+/* Trips without an explicit ISO `code` in their data file are matched by name. */
+const fallbackTrips = {{ trips_without_code | jsonify }}.map(n => n.toLowerCase());
+if (fallbackTrips.length) {
+  document.querySelectorAll('.travel-map path, .travel-map circle').forEach(el => {
+    const name = (el.getAttribute('aria-label') || '').toLowerCase();
+    if (fallbackTrips.includes(name)) el.classList.add('is-visited');
+  });
+}
 
 /* Fade each photo in as it finishes loading, so opening a gallery feels
    smooth even while the larger images are still being fetched. */
