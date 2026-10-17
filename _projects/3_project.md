@@ -2,10 +2,11 @@
 layout: page
 title: Dynamical LLM
 description: Neural ODEs for language generation
-img: 
+img: assets/img/probdynllm.png
 importance: 2
 category: research
 ---
+
 
 During my first year of Master, I conducted a research project under the supervision of Tal Kachman as a preparation to my extended research thesis.
 
