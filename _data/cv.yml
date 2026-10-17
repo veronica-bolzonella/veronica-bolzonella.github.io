@@ -4,7 +4,7 @@ cv:
   email: veronica.bolzonella@ru.nl
   location: Nijmegen, NL
   image: ""
-  summary: I am a driven and enthusiastic AI MS student, always open to new experiences and perspectives. I am fundamentally interested in the intersection between DL and Applied Mathematics, particularly Dynamical Systems, and Game Theory.
+  summary: "I am a driven and enthusiastic AI MS student, always open to new experiences and perspectives. I am fundamentally interested in the intersection between DL and Applied Mathematics, particularly Dynamical Systems, and Game Theory."
 
   social_networks:
     - network: GitHub
@@ -14,112 +14,101 @@ cv:
 
   sections:
     Education:
+      - institution: Concordia University
+        location: Montreal, Canada
+        url: https://www.concordia.ca
+        area: "Master's thesis research (MSc Artificial Intelligence, Radboud University)"
+        studyType: Masters Thesis
+        start_date: 2027-01
+        end_date: 2027-06
+        highlights:
+          - "Completing the master's thesis on NeuralGMFG (Neural ODE solvers for Graphon Mean Field Games), funded by the MITACS Globalink Research Award."
+
       - institution: Radboud University
         location: Nijmegen, Netherlands
         url: https://www.ru.nl/en
         area: Artificial Intelligence (Interactive Agents)
         studyType: Masters
-        start_date: 2025
+        start_date: 2025-09
         end_date: 2027
         score: ""
-        courses: Probabilistic Deep Learning, Statistical Machine Learning, Complex Adaptive Systems.
+        courses: "Probabilistic Deep Learning, Statistical Machine Learning, Complex Adaptive Systems, Information Retrieval, Text and Multimedia Mining, Ethics for AI."
         highlights:
-          - Focus on Neural Differential Equations, dynamical systems, Game Theory and fundamentals of Deep Learning,
+          - "Focus on Neural Differential Equations, dynamical systems, Game Theory and fundamentals of Deep Learning."
 
       - institution: Radboud University
         location: Nijmegen, Netherlands
         area: Artificial Intelligence
         studyType: Bachelors
-        start_date: 2022
-        end_date: 2025
+        start_date: 2022-09
+        end_date: 2025-07
+        courses: "Deep Learning (9.0), Reinforcement Learning (9.5), Multi-Agent Systems (9.0), Linear Algebra (9.5), Calculus I & II (9.5), Bayesian Statistics (8.0), Applied Mathematics (8.5)."
         highlights:
-          - Graduate cum laude with an 8.8/10
-          - Bachelors Thesis in compression of Diffusion Models
+          - "Graduated cum laude."
+          - "Bachelors Thesis on compression of Diffusion Models (graded 8.5/10)."
 
-      - institution: Gadjah Mada University
-        location: Yogjakarta, Indonesia
+      - institution: Universitas Gadjah Mada
+        location: Yogyakarta, Indonesia
         area: Computer Science
         studyType: Bachelors Exchange
-        start_date: 2024
-        courses: Internet of Things, Smart Environments, Bioinformatics.
-      
-
+        start_date: 2024-08
+        end_date: 2024-12
+        courses: "Internet of Things, Smart Environments, Bioinformatics."
 
     Experience:
-      - company: Institute for Advanced Study, Princeton University
-        position: Professor of Theoretical Physics
-        location: Princeton University, NJ
-        start_date: 1933
-        end_date: 1955
-        summary: Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.
+      - company: Radboud University
+        position: Research Intern
+        location: Nijmegen, Netherlands
+        start_date: 2025-07
+        end_date: present
         highlights:
-          - Relativity
-          - Description 2.
+          - "Investigating Neural Differential Equations (ODEs) for sequence modeling in Neural Language Models, supervised by Dr. Tal Kachman."
+          - "Reducing model size and memory footprint while maintaining performance for small-scale LLM surrogates."
 
-      - company: California Institute of Technology
-        position: Visiting Professor
-        location: Pasadena, California, US
-        start_date: 1933
-        end_date: 1933
+      - company: Radboud University
+        position: Bachelor Research Thesis
+        location: Nijmegen, Netherlands
+        start_date: 2025-03
+        end_date: 2025-06
         highlights:
-          - Description 1.
-          - Description 2.
+          - "Low Effort Compression for Efficient Diffusion: analyzed the effects of naive compression on large-scale image generation models (graded 8.5/10)."
 
-      - company: Kaiser Wilhelm Institute for Physics
-        position: Director
-        location: Berlin, Germany
-        start_date: 1917
-        end_date: 1933
-
-      - company: Karl-Ferdinand University
-        position: Professor of Theoretical Physics
-        location: Prague, Czechoslovakia
-        start_date: 1911
-        end_date: 1917
-
-      - company: University of Zurich
-        position: Associate Professor of Theoretical Physics
-        location: Zurich, Switzerland
-        start_date: 1909
-        end_date: 1911
-
-    Volunteer:
-      - company: People's Climate March
-        position: Lead Organizer
-        location: Zurich, Switzerland
-        start_date: 2014-04-01
-        end_date: 2015-07-01
-        summary: Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.
+      - company: Radboud University
+        position: Student Assistant
+        location: Nijmegen, Netherlands
+        start_date: 2023
+        end_date: 2025
         highlights:
-          - "Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march."
-          - "Men of the year 2014 by Time magazine"
+          - "Knowledge Representation (Mar 2025 - Jun 2025)."
+          - "Formal Reasoning (Nov 2023 - Jan 2024)."
+
+      - company: IB Academy
+        position: Tutor, Recruiter and Project Manager
+        location: Utrecht, Netherlands
+        start_date: 2022-10
+        end_date: present
+        highlights:
+          - "Delivered 500+ hours of IB Mathematics tutoring (HL/SL)."
+          - "Managed student progress, recruitment, and course materials."
 
     Awards:
-      - title: Nobel Prize in Physics
-        authors:
-          - "Royal Swedish Academy of Sciences"
-        date: 1921-11-01
-        awarder: Royal Swedish Academy of Sciences
-        url: https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/
-        summary: The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'
-
-      - title: Max Planck Medal
-        authors:
-          - "German Physical Society"
-        date: 2029
-        awarder: German Physical Society
-        summary: Awarded for outstanding scientific achievement
+      - title: MITACS Globalink Research Award
+        date: 2026-01-07
+        awarder: MITACS
+        url: https://www.mitacs.ca/our-programs/globalink-research-award/
+        summary: "Grant funding thesis research at Concordia University, Canada."
 
     Skills:
       - name: Programming
-        keywords: Python (Master), Matlab (Intermediate), Java (Intermediate), Scala (Intermediate)
+        keywords: "Python (Advanced), Java (Intermediate), Scala (Intermediate), MATLAB (Intermediate)"
       - name: Mathematics
-        keywords: Calculus, Algebra, Game Theory
+        keywords: "Calculus, Linear Algebra, Game Theory"
       - name: Tools
-        keywords: Git, Linux, Jupyter Lab and Colab, Coq proof assistant, Latex.
+        keywords: "Git, Linux, Jupyter, WandB, LaTeX, Coq proof assistant, Scrum"
       - name: Libraries and Frameworks
-        keywords: JAX (Diffrax, Equinox), PyTorch, TensorFlow, Scikit-learn, Scrum.
-
+        keywords: "JAX (Diffrax, Equinox), PyTorch, PyTorch Lightning, Hugging Face, TensorFlow, Scikit-learn"
+      - name: AI Domains
+        keywords: "Neural ODEs, NLP, Deep Learning, Multi-Agent Systems, Reinforcement Learning, Explainable AI"
 
     Languages:
       - name: Italian
@@ -127,24 +116,30 @@ cv:
       - name: English
         summary: "Fluent"
       - name: Spanish
-        summary: "Conversational"
+        summary: "Working proficiency"
       - name: Portuguese
-        summary: "Conversational"
+        summary: "Working proficiency"
       - name: French
         summary: "Basic"
 
-    
     Projects:
-      - name: Neural ODEs for Language Generation
-        summary: TODO
-        start_date: 2025
-        end_date: 2026
+      - name: NeuralGMFG
+        summary: "Neural ODE solvers for Graphon Mean Field Games on multi-community flocking dynamics, validated against analytical Riccati solutions (JAX, Equinox, Diffrax). Master's thesis project."
+      - name: Uncertainty Estimation in RAG Systems
+        summary: "Information Retrieval project investigating the accuracy of uncertainty estimation metrics for retrieval-augmented generation, specifically for long-form answers."
+      - name: Gender and Social Bias in Children's Literature
+        summary: "Text Mining project exploring bias in children's books using custom-trained Word2Vec embeddings."
 
-    References:
-      - name: Tal Kachman
-        reference: TODO
-        
-      - name: Jason Bramburger
-        icon: fa-solid fa-thumbtack
-        reference: TODO
-        
+    International Experience & Volunteering:
+      - company: AFS Scholarship
+        position: Exchange Student
+        location: Brazil
+        start_date: 2019
+        end_date: 2020
+        summary: "Full immersion year abroad; developed working proficiency in Portuguese."
+      - company: Patmos Foundation
+        position: School Volunteer and Fundraiser Manager
+        location: Arusha, Tanzania
+        summary: "School volunteer and fundraiser manager for local educational initiatives."
+      - company: Erasmus+ Programs
+        summary: "Cross-cultural experience through multiple academic exchange programs."
