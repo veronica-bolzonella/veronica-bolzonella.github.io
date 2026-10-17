@@ -39,8 +39,11 @@ nav_order: 5
   {% assign desc = meta.description %}
   {% assign f_id = f | slugify %}
 
-  {% assign search_path = "/assets/img/travels/" | append: f | append: "/" %}
-  {% assign group_imgs = photos | where_exp: "img", "img.path contains search_path" | where_exp: "img", "img.extname != '.yml' and img.extname != '.json'" %}
+  {% assign group_imgs = "" | split: "" %}
+  {% for photo in photos %}
+    {% assign photo_parts = photo.path | split: "/" %}
+    {% if photo_parts[4] == f %}{% assign group_imgs = group_imgs | push: photo %}{% endif %}
+  {% endfor %}
 
   <button class="travel-card" data-target="dlg-{{ f_id }}">
     <div class="card-image-wrap">
