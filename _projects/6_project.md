@@ -3,7 +3,7 @@ layout: page
 title: Text Mining
 description: Gender and Social Bias in Children's Literature
 img: assets/img/children.png
-importance: 4
+importance: 5
 category: research
 ---
 
