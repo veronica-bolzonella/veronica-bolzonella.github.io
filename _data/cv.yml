@@ -97,6 +97,10 @@ cv:
         awarder: MITACS
         url: https://www.mitacs.ca/our-programs/globalink-research-award/
         summary: "Grant funding thesis research at Concordia University, Canada."
+      - title: AFS Scholarship
+        date: 2019-01-01
+        awarder: AFS Italy
+        summary: Year abroad program in Brazil funded by AFS. 
 
     Skills:
       - name: Programming
@@ -130,16 +134,10 @@ cv:
       - name: Gender and Social Bias in Children's Literature
         summary: "Text Mining project exploring bias in children's books using custom-trained Word2Vec embeddings."
 
-    International Experience & Volunteering:
-      - company: AFS Scholarship
-        position: Exchange Student
-        location: Brazil
-        start_date: 2019
-        end_date: 2020
-        summary: "Full immersion year abroad; developed working proficiency in Portuguese."
+    Volunteer:
       - company: Patmos Foundation
         position: School Volunteer and Fundraiser Manager
         location: Arusha, Tanzania
         summary: "School volunteer and fundraiser manager for local educational initiatives."
       - company: Erasmus+ Programs
-        summary: "Cross-cultural experience through multiple academic exchange programs."
+        summary: "Cross cultural experiences through multiple exchange programs in differnt countries."
