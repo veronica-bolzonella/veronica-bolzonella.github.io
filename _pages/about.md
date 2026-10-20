@@ -34,7 +34,7 @@ This research not only expanded and continues to expand my academic horizon to n
 
 You can check my [projects]({{ ‘/projects/’ | relative_url }}) page to read about some of my other reasearch and development projects and my takeaways.
 
-My current research is all about findin equilibria, where agents settle and can rest assured they are making the most out of their game. My goal at a broader scale is to controbute to the academic community in fundamental Deep Learning and Mathematics and to build tools that help the world find its own equilibrium (Nash, ideally).
+My current research is all about finding equilibria, where agents settle and can rest assured they are making the most out of their game. My goal at a broader scale is to controbute to the academic community in fundamental Deep Learning and Mathematics and to build tools that help the world find its own equilibrium (Nash, ideally).
 I wish to never cease to find the beauty and fulfillment one feels when solving a math problem. As Grant Sanderson beautifully puts it:
 
 > There is a joy simply to doing math. A very specific emotion (...). There are a lot of different parts of math that give that feeling of reshaping your thoughts.
