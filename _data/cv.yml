@@ -1,6 +1,6 @@
 cv:
   name: Veronica Bolzonella
-  label: AI Masters Student
+  label: AI Master's Student
   email: veronica.bolzonella@ru.nl
   location: Nijmegen, NL
   image: ""
@@ -18,7 +18,7 @@ cv:
         location: Montreal, Canada
         url: https://www.concordia.ca
         area: "Master's thesis research (MSc Artificial Intelligence, Radboud University)"
-        studyType: Masters Thesis
+        studyType: Maste'rs Thesis
         start_date: 2027-01
         end_date: 2027-06
         highlights:
@@ -28,11 +28,11 @@ cv:
         location: Nijmegen, Netherlands
         url: https://www.ru.nl/en
         area: Artificial Intelligence (Interactive Agents)
-        studyType: Masters
+        studyType: Master
         start_date: 2025-09
         end_date: 2027
         score: ""
-        courses: "Probabilistic Deep Learning, Statistical Machine Learning, Complex Adaptive Systems, Information Retrieval, Text and Multimedia Mining, Ethics for AI."
+        courses: "Probabilistic Deep Learning (9.5), Complex Adaptive Systems (9.0), Information Retrieval (8.0), Text and Multimedia Mining (8.5)"
         highlights:
           - "Focus on Neural Differential Equations, dynamical systems, Game Theory and fundamentals of Deep Learning."
 
@@ -62,8 +62,7 @@ cv:
         start_date: 2025-07
         end_date: present
         highlights:
-          - "Investigating Neural Differential Equations (ODEs) for sequence modeling in Neural Language Models, supervised by Dr. Tal Kachman."
-          - "Reducing model size and memory footprint while maintaining performance for small-scale LLM surrogates."
+          - "Investigating Neural Differential Equations for sequence modeling in language; proof of concept for Dynamical Language Models; supervised by Dr. Tal Kachman."
 
       - company: Radboud University
         position: Bachelor Research Thesis
@@ -89,7 +88,8 @@ cv:
         end_date: present
         highlights:
           - "Delivered 500+ hours of IB Mathematics tutoring (HL/SL)."
-          - "Managed student progress, recruitment, and course materials."
+          - "Managed recruitment, and course materials."
+          - "Co-authored Math study guides."
 
     Awards:
       - title: MITACS Globalink Research Award
@@ -127,17 +127,21 @@ cv:
         summary: "Basic"
 
     Projects:
-      - name: NeuralGMFG
+      - name: NeuralGMFGs
         summary: "Neural ODE solvers for Graphon Mean Field Games on multi-community flocking dynamics, validated against analytical Riccati solutions (JAX, Equinox, Diffrax). Master's thesis project."
       - name: Uncertainty Estimation in RAG Systems
         summary: "Information Retrieval project investigating the accuracy of uncertainty estimation metrics for retrieval-augmented generation, specifically for long-form answers."
       - name: Gender and Social Bias in Children's Literature
         summary: "Text Mining project exploring bias in children's books using custom-trained Word2Vec embeddings."
 
-    Volunteer:
+    Volunteering:
+      - company: Yogyakarta Internation School
+        position: Teacher Assistant
+        location: Yogyakarta, Indonesia
+        summary: "Assisted Mathematics and Computer Science courses."
       - company: Patmos Foundation
         position: School Volunteer and Fundraiser Manager
         location: Arusha, Tanzania
         summary: "School volunteer and fundraiser manager for local educational initiatives."
       - company: Erasmus+ Programs
-        summary: "Cross cultural experiences through multiple exchange programs in differnt countries."
+        summary: "Cross cultural experiences through multiple exchange programs in different countries."
