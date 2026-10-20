@@ -29,10 +29,10 @@ I am Veronica, a [Master's student]({{ ‘/cv/’ | relative_url }}) of Artifici
 I started my Bachelor's in AI at Radboud University, back in the days when people would ask _"AI? What is that?"_. That was actually just a few years back, in 2022. Since then, I finished my Bachelor's, started my Master's in Interactive Agents, and people stopped asking me what AI is. 
 In the years I spent learning, I found and shaped my niche within the vast field of AI in the intersection of Deep Learning and Applied Mathematics. 
 Through inspiring professors around me and personal exploration, I developed a keen interest for Dynamical Systems and Game Theory. 
-My Master's thesis [_Neural GMFGs_]({{ '/projects/1_project/' | relative_url }}) is an example of a project that grows out of this combination of elements. In this project I explore the use of self-supervised learning in Neural Differential Equations to solve complex heterogeneous systems in the framework of Graphon Mean Field Games. 
+My Master's thesis [Neural GMFGs]({{ '/projects/1_project/' | relative_url }}) is an example of a project that grows out of this combination of elements. In this project I explore the use of self-supervised learning in Neural Differential Equations to solve complex heterogeneous systems in the framework of Graphon Mean Field Games. 
 This research not only expanded and continues to expand my academic horizon to new fields and topics, but also allows me to connect to researchers around the globe, who I admire and who inspire me to continue my journey in academic research. In January 2026 I was awarded the MITACS Globalink Award, which will bring me to Concordia University in 2027 to complete my project and continue to grow as a researcher in one of today's most renowned science hubs, Montreal!
 
-You can check my [projects]({{ ‘/projects/’ | relative_url }}) page to read about other projects and my takeaways.
+You can check my [projects]({{ ‘/projects/’ | relative_url }}) page to read about some of my other reasearch and development projects and my takeaways.
 
 My current research is all about findin equilibria, where agents settle and can rest assured they are making the most out of their game. My goal at a broader scale is to controbute to the academic community in fundamental Deep Learning and Mathematics and to build tools that help the world find its own equilibrium (Nash, ideally).
 I wish to never cease to find the beauty and fulfillment one feels when solving a math problem. As Grant Sanderson beautifully puts it:
