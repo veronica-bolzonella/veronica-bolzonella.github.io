@@ -134,7 +134,7 @@ cv:
       - name: Gender and Social Bias in Children's Literature
         summary: "Text Mining project exploring bias in children's books using custom-trained Word2Vec embeddings."
 
-    Volunteering:
+    Volunteer:
       - company: Yogyakarta Internation School
         position: Teacher Assistant
         location: Yogyakarta, Indonesia
